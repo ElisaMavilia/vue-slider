@@ -5,7 +5,13 @@ const {createApp} = Vue;
 createApp({
     data(){
         return {
-            slides: slide
+            slides: slides,
         }
+    },
+    methods: {
+
+    },
+    mounted(){
+
     }
-})
+}).mount("#app");
