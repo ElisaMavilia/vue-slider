@@ -36,8 +36,8 @@
                     <div class="prev"></div>
                     <div class="next"></div>
                     <!-- elimino i div contententi le immagini e inizializzo v-for a partire dall'immagine con la classe active  -->
-                    <div class="thumb active" v-for="(slides, index) in slides" :key="index"> <!-- inserisco key="index come identificatore" -->
-                        <img src="img/01.webp" alt="Svezia" />
+                    <div class="thumb active" v-for="(slides, index) in slides" :key="index"> <!-- inserisco key="index" come identificatore" -->
+                        <img :src="slides.image" :alt="slides.title"/> <!-- inserisco il percorso delle immagini -->
                     </div>
                     
                 </div>
