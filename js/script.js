@@ -7,7 +7,6 @@ createApp({
         return {
             slides: slides,
             activeIndexSlide: 0, // l'indice della slide attiva va inserito dentro una variabile in modo da poter scorrere il resto delle immagini */
-            intervalSlide: null
         }
     },
     methods: {
@@ -29,12 +28,10 @@ createApp({
             this.activeIndexSlide = index;
         },
     },
-    /* mounted(){
-       if(!this.intervalSlide){
-            setInterval(this.nextSlide,1000);
-            this.nextSlide();
-        } else{ 
-          
-        }
-    }  */
+
+    mounted(){
+        setInterval(this.nextSlide, 1000);
+        
+    }, 
+   
 }).mount("#app");
