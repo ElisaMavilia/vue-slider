@@ -30,7 +30,7 @@ createApp({
     },
 
     mounted(){
-        setInterval(this.nextSlide, 1000);
+        setInterval(this.nextSlide, 3000);
         
     }, 
    
