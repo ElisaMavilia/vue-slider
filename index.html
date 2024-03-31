@@ -38,7 +38,7 @@
                     <div class="next" @click="nextSlide"></div>
                     <!-- elimino i div contententi le immagini e inizializzo v-for a partire dall'immagine con la classe active  -->
                     <!-- inserisco la classe active in base all'indice -->
-                    <div class="thumb" :class="{'active': index === activeIndexSlide}" v-for="(slides, index) in slides" :key="index"> <!-- inserisco key="index" come identificatore" -->
+                    <div class="thumb" :class="{'active': index === activeIndexSlide}" v-for="(slides, index) in slides" :key="index" @click="goToSlide(index)"> <!-- inserisco key="index" come identificatore" -->
                         <img :src="slides.image" :alt="slides.title"/> <!-- inserisco il percorso delle immagini -->
                     </div>
                     

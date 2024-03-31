@@ -6,7 +6,8 @@ createApp({
     data(){
         return {
             slides: slides,
-            activeIndexSlide: 0 // l'indice della slide attiva va inserito dentro una variabile in modo da poter scorrere il resto delle immagini */
+            activeIndexSlide: 0, // l'indice della slide attiva va inserito dentro una variabile in modo da poter scorrere il resto delle immagini */
+            intervalSlide: null
         }
     },
     methods: {
@@ -23,10 +24,17 @@ createApp({
         } else {
             this.activeIndexSlide = this.slides.length - 1;
         }
-        
-        }
     },
-    mounted(){
-
-    }
+        goToSlide(index){ // al click della thumbnail l'immagine centrale cambia
+            this.activeIndexSlide = index;
+        },
+    },
+    /* mounted(){
+       if(!this.intervalSlide){
+            setInterval(this.nextSlide,1000);
+            this.nextSlide();
+        } else{ 
+          
+        }
+    }  */
 }).mount("#app");
